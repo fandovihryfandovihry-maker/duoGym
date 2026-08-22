@@ -1,0 +1,78 @@
+'use strict';
+
+var CACHE_NAME='duogym-legacy-v13';
+var APP_SHELL=[
+  './',
+  './index.html',
+  './legacy-v4.css?v=13',
+  './legacy.js?v=13',
+  './manifest.webmanifest?v=13',
+  '../icon.svg',
+  './fonts/manrope-regular.woff',
+  './fonts/manrope-medium.woff',
+  './fonts/manrope-semibold.woff',
+  './fonts/manrope-bold.woff',
+  './exercises/rear-delt.gif',
+  './exercises/web/bar-rdl-1.jpg',
+  './exercises/web/bar-rdl-2.jpg',
+  './exercises/web/bench-1.jpg',
+  './exercises/web/bench-2.jpg',
+  './exercises/web/close-bench-1.jpg',
+  './exercises/web/close-bench-clean-2.jpg',
+  './exercises/web/dumbbell-row-clean.jpg',
+  './exercises/web/ez-curl-clean-1.jpg',
+  './exercises/web/ez-curl-clean-2.jpg',
+  './exercises/web/ez-row-1.jpg',
+  './exercises/web/ez-row-2.jpg',
+  './exercises/web/hammer-1.jpg',
+  './exercises/web/hammer-2.jpg',
+  './exercises/web/hollow.jpg',
+  './exercises/web/incline-1.jpg',
+  './exercises/web/incline-clean-2.jpg',
+  './exercises/web/lateral-1.jpg',
+  './exercises/web/lateral-2.jpg',
+  './exercises/web/leg-raise-1.jpg',
+  './exercises/web/leg-raise-2.jpg',
+  './exercises/web/ohp-1.jpg',
+  './exercises/web/ohp-2.jpg',
+  './exercises/web/plank-1.jpg',
+  './exercises/web/plank-2.jpg',
+  './exercises/web/reverse-lunge.jpg',
+  './exercises/web/shrug-1.jpg',
+  './exercises/web/shrug-2.jpg',
+  './exercises/web/skull-1.jpg',
+  './exercises/web/skull-2.jpg',
+  './exercises/web/squat-1.jpg',
+  './exercises/web/squat-2.jpg'
+];
+
+self.addEventListener('install',function(event){
+  event.waitUntil(caches.open(CACHE_NAME).then(function(cache){
+    return Promise.all(APP_SHELL.map(function(url){return cache.add(url);}));
+  }).then(function(){return self.skipWaiting();}));
+});
+
+self.addEventListener('activate',function(event){
+  event.waitUntil(caches.keys().then(function(names){
+    return Promise.all(names.map(function(name){
+      if(name.indexOf('duogym-legacy-')===0&&name!==CACHE_NAME){return caches.delete(name);}
+    }));
+  }).then(function(){return self.clients.claim();}));
+});
+
+self.addEventListener('fetch',function(event){
+  if(event.request.method!=='GET'){return;}
+  event.respondWith(caches.match(event.request,{ignoreSearch:true}).then(function(cached){
+    if(cached){return cached;}
+    return fetch(event.request).then(function(response){
+      if(response&&response.status===200){
+        var copy=response.clone();
+        caches.open(CACHE_NAME).then(function(cache){cache.put(event.request,copy);});
+      }
+      return response;
+    }).catch(function(){
+      if(event.request.mode==='navigate'){return caches.match('./');}
+      return caches.match('./index.html');
+    });
+  }));
+});
