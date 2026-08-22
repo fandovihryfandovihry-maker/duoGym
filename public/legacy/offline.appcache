@@ -1,12 +1,12 @@
 CACHE MANIFEST
-# DuoGym offline v14
+# DuoGym offline v15
 
 CACHE:
 ./
 ./index.html
-./legacy-v4.css?v=14
-./legacy.js?v=14
-./manifest.webmanifest?v=14
+./legacy-v4.css?v=15
+./legacy.js?v=15
+./manifest.webmanifest?v=15
 ../icon.svg
 ./fonts/manrope-regular.woff
 ./fonts/manrope-medium.woff
@@ -33,6 +33,9 @@ CACHE:
 ./exercises/web/lateral-2.jpg
 ./exercises/web/leg-raise-1.jpg
 ./exercises/web/leg-raise-2.jpg
+./exercises/web/leg-extension-1.png
+./exercises/web/leg-curl-1.png
+./exercises/web/leg-curl-2.png
 ./exercises/web/ohp-1.jpg
 ./exercises/web/ohp-2.jpg
 ./exercises/web/plank-1.jpg

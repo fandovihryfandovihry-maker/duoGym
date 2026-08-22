@@ -7,32 +7,35 @@
     row:['Záda drž rovná','Lokty táhni k bokům','Pohyb dokonči lopatkami'],
     squat:['Kolena ve směru špiček','Zpevni střed těla','Tlač přes celá chodidla'],
     hinge:['Kyčle tlač dozadu','Záda drž neutrálně','Zátěž drž blízko těla'],
+    knee:['Koleno srovnej s kloubem nástavce','Pohyb proveď bez švihu','Návrat brzdi pod kontrolou'],
+    calf:['Spusť paty do protažení','Nahoře krátce zatni lýtka','Nehoupej se v kolenou'],
     arms:['Lokty drž stabilní','Bez houpání trupem','Využij plný rozsah'],
     core:['Žebra drž dole','Zpevni břicho i hýždě','Dýchej pod kontrolou'],
     power:['Každé opakování proveď naplno','Dopad ztlum a drž kolena stabilní','Jakmile zpomalíš, sérii ukonči']
   };
   var unilateral={dbrow:'RUKA',bulgarian:'NOHA',lunge:'NOHA',singlebridge:'NOHA'};
-  var startingWeights={bench:35,lateral:5,closebench:30,dbohp:10,incline:10,skull:20,barrow:15,hammer:10,shrug:20,reardelt:5,dbrow:15,curl:20,squat:20,barrdl:20,lunge:10,ohp:20};
+  var startingWeights={bench:35,lateral:5,closebench:30,dbohp:10,incline:10,skull:20,barrow:15,hammer:10,shrug:20,reardelt:5,dbrow:15,curl:20,squat:20,barrdl:20,rdl:10,lunge:10,ohp:20,goblet:10,legext:10,legcurl:10,calf:10};
   var workouts=[
-    {name:'Push',sub:'Hrudník · triceps · ramena',blocks:[
-      {sets:4,a:ex('bench','Benchpress na lavici',8,'8 op.','VELKÁ OSA + LAVICE','press'),b:ex('lateral','Upažování vestoje',12,'12 op.','2 JEDNORUČKY','arms',1)},
-      {sets:3,a:ex('closebench','Benchpress úzkým úchopem',10,'10 op.','VELKÁ OSA + LAVICE','press'),b:ex('dbohp','Tlaky s jednoručkami nad hlavu vestoje',10,'10 op.','2 JEDNORUČKY','press',1)},
-      {sets:3,a:ex('incline','Tlaky s jednoručkami na šikmé lavici',12,'12 op.','LAVICE + 2 JEDNORUČKY','press',1),b:ex('skull','Francouzský tlak s EZ vleže na zemi',12,'12 op.','EZ OSA + PODLOŽKA','arms')}
+    {name:'Vršek A',sub:'Hrudník · záda · paže',blocks:[
+      {sets:4,a:ex('bench','Benchpress na lavici',8,'8 op.','VELKÁ OSA + LAVICE','press'),b:ex('dbrow','Přítahy jednoručky v předklonu',10,'10 / ruka','1 JEDNORUČKA','row',1)},
+      {sets:3,a:ex('incline','Tlaky s jednoručkami na šikmé lavici',10,'10 op.','LAVICE + 2 JEDNORUČKY','press',1),b:ex('barrow','Přítahy velké osy v předklonu',10,'10 op.','VELKÁ OSA','row')},
+      {sets:3,a:ex('lateral','Upažování vestoje',12,'12 op.','2 JEDNORUČKY','arms',1),b:ex('curl','Bicepsový zdvih s EZ',10,'10 op.','EZ OSA','arms')}
     ]},
-    {name:'Pull',sub:'Záda · biceps',blocks:[
-      {sets:4,a:ex('barrow','Přítahy velké osy v předklonu',8,'8 op.','VELKÁ OSA','row'),b:ex('hammer','Kladivové zdvihy',12,'12 op.','2 JEDNORUČKY','arms',1)},
-      {sets:3,a:ex('shrug','Krčení ramen s velkou osou',10,'10 op.','VELKÁ OSA','row'),b:ex('reardelt','Upažování v předklonu',12,'12 op.','2 JEDNORUČKY','row',1)},
-      {sets:3,a:ex('dbrow','Přítahy jednoručky v předklonu',12,'12 / ruka','2 JEDNORUČKY','row',1),b:ex('curl','Bicepsový zdvih s EZ',12,'12 op.','EZ OSA','arms')}
+    {name:'Spodek A',sub:'Síla · výbušnost · nohy',blocks:[
+      {sets:3,a:ex('jump','Výskoky z podřepu',5,'5 op.','BEZ VYBAVENÍ','power',0,'Rychlé dřepy bez výskoku',true),b:ex('plank','Plank',30,'30 s','PODLOŽKA','core',0,'',true)},
+      {sets:4,a:ex('squat','Zadní dřep s osou',8,'8 op.','VELKÁ OSA','squat'),b:ex('rdl','Rumunský mrtvý tah s jednoručkami',10,'10 op.','2 JEDNORUČKY','hinge',1)},
+      {sets:3,a:ex('legext','Předkopávání na lavici',12,'12 op.','LAVICE + NÁSTAVEC','knee',2.5),b:ex('calf','Výpony na lýtka vestoje',15,'15 op.','2 JEDNORUČKY','calf',1)},
+      {sets:3,a:ex('legcurl','Zakopávání vleže na lavici',12,'12 op.','LAVICE + NÁSTAVEC','knee',2.5),b:ex('hollow','Hollow hold',30,'30 s','PODLOŽKA','core',0,'',true)}
     ]},
-    {name:'Nohy + břicho',sub:'Nohy · břicho',blocks:[
-      {sets:4,a:ex('squat','Zadní dřep s osou',8,'8 op.','VELKÁ OSA','squat'),b:ex('legraise','Zvedání nohou vleže',12,'12 op.','PODLOŽKA','core',0,'',true)},
-      {sets:3,a:ex('barrdl','Rumunský mrtvý tah s osou',10,'10 op.','VELKÁ OSA','hinge'),b:ex('plank','Plank',30,'30 s','PODLOŽKA','core',0,'',true)},
-      {sets:3,a:ex('lunge','Výpady vzad s jednoručkami',12,'12 / noha','2 JEDNORUČKY','squat',1),b:ex('hollow','Hollow hold',30,'30 s','PODLOŽKA','core',0,'',true)}
+    {name:'Vršek B',sub:'Ramena · záda · hrudník',blocks:[
+      {sets:4,a:ex('ohp','Tlaky nad hlavu vestoje',8,'8 op.','VELKÁ OSA','press'),b:ex('dbrow','Přítahy jednoručky v předklonu',10,'10 / ruka','1 JEDNORUČKA','row',1)},
+      {sets:3,a:ex('incline','Tlaky s jednoručkami na šikmé lavici',10,'10 op.','LAVICE + 2 JEDNORUČKY','press',1),b:ex('barrow','Přítahy velké osy v předklonu',10,'10 op.','VELKÁ OSA','row')},
+      {sets:3,a:ex('skull','Francouzský tlak s EZ vleže na zemi',12,'12 op.','EZ OSA + PODLOŽKA','arms'),b:ex('reardelt','Upažování v předklonu',12,'12 op.','2 JEDNORUČKY','row',1)}
     ]},
-    {name:'Ramena + paže',sub:'Ramena · biceps · triceps',blocks:[
-      {sets:4,a:ex('ohp','Tlaky nad hlavu vestoje',8,'8 op.','VELKÁ OSA','press'),b:ex('hammer','Kladivové zdvihy',12,'12 op.','2 JEDNORUČKY','arms',1)},
-      {sets:3,a:ex('lateral','Upažování vestoje',12,'12 op.','2 JEDNORUČKY','arms',1),b:ex('curl','Bicepsový zdvih s EZ',10,'10 op.','EZ OSA','arms')},
-      {sets:3,a:ex('reardelt','Upažování v předklonu',12,'12 op.','2 JEDNORUČKY','row',1),b:ex('skull','Francouzský tlak s EZ vleže na zemi',12,'12 op.','EZ OSA + PODLOŽKA','arms')}
+    {name:'Spodek B',sub:'Hamstringy · stehna · core',blocks:[
+      {sets:4,a:ex('barrdl','Rumunský mrtvý tah s osou',8,'8 op.','VELKÁ OSA','hinge'),b:ex('goblet','Goblet dřep s jednoručkou',10,'10 op.','1 JEDNORUČKA','squat',1)},
+      {sets:3,a:ex('lunge','Výpady vzad s jednoručkami',10,'10 / noha','2 JEDNORUČKY','squat',1),b:ex('legcurl','Zakopávání vleže na lavici',12,'12 op.','LAVICE + NÁSTAVEC','knee',2.5)},
+      {sets:3,a:ex('calf','Výpony na lýtka vestoje',15,'15 op.','2 JEDNORUČKY','calf',1),b:ex('hollow','Hollow hold',30,'30 s','PODLOŽKA','core',0,'',true)}
     ]}
   ];
 
@@ -69,7 +72,9 @@
     deadlift:{files:['exercises/web/deadlift.jpg'],credit:'wger · CC BY-SA'},
     goblet:{files:['exercises/web/goblet-1.jpg','exercises/web/goblet-2.jpg'],credit:'wger · CC BY-SA'},
     bulgarian:{files:['exercises/web/bulgarian.jpg'],credit:'wger · CC BY-SA'},
-    shrug:{files:['exercises/web/shrug-1.jpg','exercises/web/shrug-2.jpg'],credit:'Everkinetic · wger · CC BY-SA'}
+    shrug:{files:['exercises/web/shrug-1.jpg','exercises/web/shrug-2.jpg'],credit:'Everkinetic · wger · CC BY-SA'},
+    legext:{files:['exercises/web/leg-extension-1.png'],credit:'BFad07 · wger · CC0'},
+    legcurl:{files:['exercises/web/leg-curl-1.png','exercises/web/leg-curl-2.png'],credit:'wger · CC BY-SA'}
   };
 
   var app=document.getElementById('app');
@@ -130,5 +135,5 @@
   app.onclick=function(event){var el=event.target,action,person,index;while(el&&el!==app&&!el.getAttribute('data-action')){if(el.getAttribute('data-stop')){return;}el=el.parentNode;}if(!el||el===app){return;}action=el.getAttribute('data-action');person=el.getAttribute('data-person');if(action==='menu'){state.menu=true;state.calendar=false;render();}else if(action==='calendar'){state.calendar=true;state.menu=false;render();}else if(action==='calendar-prev'){moveCalendar(-1);}else if(action==='calendar-next'){moveCalendar(1);}else if(action==='close'){state.menu=false;state.calendar=false;state.help=null;render();}else if(action==='help'){state.help=person;render();}else if(action==='done'){markDone(person);}else if(action==='skip'){clearRest();state.done={son:false,dad:false};advance();}else if(action==='weight-up'||action==='weight-down'||action==='reps-up'||action==='reps-down'){change(action,person);}else if(action==='continue'){clearRest();advance();}else if(action==='choose'){index=parseInt(el.getAttribute('data-index'),10);resetPosition(index);}else if(action==='next-day'){resetPosition((state.day+1)%4);}else if(action==='repeat'){resetPosition(state.day);}else if(action==='reset'){if(window.confirm('Opravdu smazat historii, váhy a kalendář?')){try{localStorage.removeItem('duogym-history');localStorage.removeItem('duogym-weights');localStorage.removeItem('duogym-completions');}catch(e){}state.history={};state.weights={};state.reps={};state.completions={};render();}}};
   load();
   render();
-  if('serviceWorker' in navigator){window.addEventListener('load',function(){var registration=navigator.serviceWorker.register('legacy-sw.js?v=14');if(registration&&registration.catch){registration.catch(function(){});}});}
+  if('serviceWorker' in navigator){window.addEventListener('load',function(){var registration=navigator.serviceWorker.register('legacy-sw.js?v=15');if(registration&&registration.catch){registration.catch(function(){});}});}
 }());

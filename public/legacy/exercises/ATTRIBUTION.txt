@@ -37,6 +37,8 @@ Source records and original files:
 - Bulgarian split squat: https://wger.de/api/v2/exerciseinfo/1706/
 - Front raises: https://wger.de/api/v2/exerciseinfo/256/
 - Barbell shrugs: https://wger.de/api/v2/exerciseinfo/571/
+- Leg extension: https://wger.de/api/v2/exerciseinfo/369/ (CC0, BFad07)
+- Lying leg curl: https://wger.de/api/v2/exerciseinfo/365/ (CC BY-SA 3.0, wger.de)
 
 License texts:
 - https://creativecommons.org/licenses/by-sa/3.0/

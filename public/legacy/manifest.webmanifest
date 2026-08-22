@@ -2,7 +2,7 @@
   "name": "DuoGym Dashboard",
   "short_name": "DuoGym",
   "description": "Offline trénink pro Fandu a tátu.",
-  "start_url": "./?v=14",
+  "start_url": "./?v=15",
   "scope": "./",
   "display": "standalone",
   "background_color": "#080a08",
