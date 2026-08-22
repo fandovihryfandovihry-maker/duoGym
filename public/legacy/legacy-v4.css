@@ -80,6 +80,10 @@ button:disabled{cursor:default}
 .rest-orb span{margin-left:6px;color:#6b7380;font-size:24px}
 .rest-line{height:4px;margin:28px auto 0;overflow:hidden;border-radius:4px;background:#191c22}
 .rest-line i{display:block;height:4px;background:#b6ff19;box-shadow:0 0 16px rgba(182,255,25,.8)}
+.rest-day-screen{position:absolute;left:0;top:82px;right:0;bottom:0;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;padding:24px;text-align:center;background:radial-gradient(circle at 50% 42%,#19210f 0,#090b09 43%,#050605 100%)}
+.rest-day-screen small{color:#8b9387;font-size:15px;font-weight:600}
+.rest-day-screen h1{margin:12px 0 34px;color:#fff;font-size:64px;line-height:1;letter-spacing:-2.4px}
+.rest-day-screen button{height:54px;padding:0 24px;border:1px solid #425329;border-radius:18px;background:#151b10;color:#eaf4dd;font-size:16px;font-weight:700}
 .rest-card button{min-width:240px;margin-top:26px;padding:16px 24px;border:1px solid #333a2f;border-radius:17px;background:#141814;color:#f4f7f1;font-size:15px;font-weight:700}
 
 .shade{position:fixed;z-index:40;left:0;top:0;right:0;bottom:0;padding:18px;overflow:auto;background:rgba(3,3,4,.96);text-align:center}
