@@ -1,0 +1,130 @@
+*{-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#050506;color:#f7f8fb;font-family:Arial,"Helvetica Neue",sans-serif;-webkit-text-size-adjust:100%}
+button{font:inherit;color:inherit;-webkit-tap-highlight-color:transparent;cursor:pointer}
+button:active{-webkit-transform:scale(.975);transform:scale(.975)}
+button:disabled{cursor:default}
+.loading{padding:40px;text-align:center}
+.app{position:fixed;left:0;top:0;right:0;bottom:0;overflow:hidden;background:#050506}
+.app:before{content:"";position:absolute;left:6%;top:-48%;width:46%;height:90%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(47,107,255,.12),rgba(47,107,255,0) 70%);pointer-events:none}
+.app:after{content:"";position:absolute;right:-2%;top:-52%;width:45%;height:90%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(126,83,255,.1),rgba(126,83,255,0) 70%);pointer-events:none}
+
+.topbar{position:absolute;z-index:3;left:0;top:0;right:0;height:72px;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;padding:9px 14px;background:#08090b;border-bottom:1px solid #1b1d22}
+.brand{width:50px;height:50px;padding:0;border:0;background:transparent}
+.brand-mark{display:block;width:44px;height:44px;border-radius:15px;background:linear-gradient(145deg,#4380ff,#2457ec);color:#fff;line-height:44px;text-align:center;font-size:21px;font-weight:700;box-shadow:0 10px 28px rgba(43,99,255,.28)}
+.title{-webkit-box-flex:1;flex:1;min-width:0;margin-left:8px}
+.title b{display:block;overflow:hidden;color:#fff;font-size:21px;line-height:1.1;text-overflow:ellipsis;white-space:nowrap}
+.title small{display:block;margin-top:5px;color:#747a86;font-size:10px;font-weight:700;letter-spacing:.75px}
+.top-actions{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;margin-left:12px}
+.top-actions button{height:43px;margin-left:7px;border-radius:14px;font-size:12px;font-weight:700}
+.skip-button{padding:0 15px;border:1px solid #292c34;background:#111318;color:#b9bec8}
+.calendar-button{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;padding:0 14px;border:1px solid #29334b;background:#111725;color:#dbe5ff}
+.calendar-button span{margin-right:7px;color:#6e98ff;font-size:20px;line-height:1}
+.settings-button{width:45px;padding:0;border:1px solid #292c34;background:#111318;color:#89909c;font-size:17px!important;letter-spacing:2px}
+.progress{position:absolute;left:0;right:0;bottom:-1px;height:3px;background:#14161a}
+.progress i{display:block;height:3px;background:linear-gradient(to right,#2d6cff,#7857ff);box-shadow:0 0 16px rgba(61,111,255,.65)}
+
+.grid{position:absolute;z-index:1;left:0;top:72px;right:0;bottom:0;display:-webkit-box;display:flex;padding:11px 9px 12px}
+.card{position:relative;-webkit-box-flex:1;flex:1;min-width:0;height:100%;margin:0 5px;padding:17px;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;overflow:hidden;border:1px solid #24272d;border-radius:25px;background:linear-gradient(155deg,#15171c 0,#0d0f12 62%,#0a0b0e 100%);box-shadow:0 24px 70px rgba(0,0,0,.4)}
+.card:before{content:"";position:absolute;right:-24%;top:-24%;width:65%;height:56%;border-radius:50%;background:radial-gradient(circle,rgba(50,104,255,.1),rgba(50,104,255,0) 68%);pointer-events:none}
+.dad:before{background:radial-gradient(circle,rgba(126,83,255,.11),rgba(126,83,255,0) 68%)}
+.person{position:relative;z-index:1;-webkit-box-flex:0;flex:0 0 40px;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}
+.avatar{display:block;width:38px;height:38px;margin-right:10px;border-radius:13px;background:#1c2d59;color:#79a0ff;line-height:38px;text-align:center;font-size:16px;font-weight:700}
+.dad .avatar{background:#332550;color:#b79bff}
+.person h2{margin:0;font-size:19px}
+.status{margin-left:auto;padding:6px 9px;border-radius:999px;background:#16191e;color:#626a77;font-size:9px;font-weight:700;letter-spacing:1px}
+.completed .status{background:#10281a;color:#6fe393}
+
+.exercise{position:relative;z-index:1;-webkit-box-flex:0;flex:0 0 auto;min-height:125px;padding-top:17px}
+.equipment{overflow:hidden;color:#737b88;font-size:10px;font-weight:700;letter-spacing:1.05px;text-overflow:ellipsis;white-space:nowrap}
+.exercise h3{max-width:95%;min-height:56px;margin:8px 0 10px;color:#fff;font-size:27px;line-height:1.05;letter-spacing:-.45px}
+.plan-row{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}
+.plan-row strong{color:#d7dbe2;font-size:15px}
+.tech-button{margin-left:auto;padding:9px 12px;border:1px solid #303747;border-radius:999px;background:#151a24;color:#a9c0ff;font-size:11px;font-weight:700}
+.tech-button:after{content:"  ›";color:#6e98ff;font-size:15px}
+.previous{position:relative;z-index:1;-webkit-box-flex:0;flex:0 0 42px;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;margin-top:10px;padding:0 12px;border:1px solid #23262c;border-radius:13px;background:#0a0c0f;color:#6f7682;font-size:11px}
+.previous span{margin-right:8px}
+.previous b{color:#c4c9d1;font-size:12px}
+.previous em{margin-left:auto;color:#74a0ff;font-size:10px;font-style:normal;font-weight:700}
+
+.controls{position:relative;z-index:1;-webkit-box-flex:1;flex:1;min-height:120px;display:-webkit-box;display:flex;margin:12px -4px 0}
+.control{-webkit-box-flex:1;flex:1;min-width:0;margin:0 4px;padding:12px 10px 10px;border:1px solid #24272e;border-radius:19px;background:#0a0c0f;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}
+.control>span{display:block;color:#656d79;text-align:center;font-size:9px;font-weight:700;letter-spacing:1.15px}
+.stepper{-webkit-box-flex:1;flex:1;min-height:78px;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;margin-top:6px;overflow:hidden}
+.stepper button{-webkit-box-flex:0;flex:0 0 53px;width:53px;height:66%;min-height:62px;padding:0;border:1px solid #292d36;border-radius:15px;background:#15181e;color:#d9dde5;font-size:29px;line-height:1}
+.stepper b{-webkit-box-flex:1;flex:1;min-width:0;text-align:center;color:#fff;font-size:43px;line-height:1;font-variant-numeric:tabular-nums}
+.stepper b small{display:block;margin-top:7px;color:#666e7b;font-size:10px;font-weight:700;text-transform:uppercase}
+.done-button{position:relative;z-index:1;-webkit-box-flex:0;flex:0 0 58px;width:100%;min-height:58px;margin-top:12px;border:0;border-radius:17px;background:linear-gradient(135deg,#3477ff,#255de9);color:#fff;font-size:15px;font-weight:700;box-shadow:0 13px 32px rgba(39,97,239,.23)}
+.dad .done-button{background:linear-gradient(135deg,#815fff,#6543db);box-shadow:0 13px 32px rgba(105,69,222,.2)}
+.completed{border-color:#254231}
+.completed .done-button{background:#14331f;box-shadow:none;color:#75df93}
+.completed .exercise,.completed .previous,.completed .controls{opacity:.46}
+
+.rest-overlay{position:fixed;z-index:30;left:0;top:0;right:0;bottom:0;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;overflow:hidden;background:#050506;color:#fff;text-align:center}
+.rest-overlay:before{content:"";position:absolute;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,rgba(49,103,255,.22),rgba(49,103,255,0) 68%)}
+.rest-card{position:relative;width:86%;max-width:560px}
+.rest-card>small{display:block;color:#769cff;font-size:12px;font-weight:700;letter-spacing:2.4px}
+.rest-orb{margin:12px 0 5px}
+.rest-orb strong{font-size:124px;line-height:.9;font-weight:700;font-variant-numeric:tabular-nums}
+.rest-orb span{margin-left:6px;color:#6b7380;font-size:24px}
+.rest-line{height:4px;margin:28px auto 0;overflow:hidden;border-radius:4px;background:#191c22}
+.rest-line i{display:block;height:4px;background:#3978ff;box-shadow:0 0 16px #3978ff}
+.rest-card button{min-width:230px;margin-top:26px;padding:15px 23px;border:1px solid #2a2e36;border-radius:15px;background:#121419;color:#f4f6f8;font-weight:700}
+
+.shade{position:fixed;z-index:40;left:0;top:0;right:0;bottom:0;padding:18px;overflow:auto;background:rgba(3,3,4,.96);text-align:center}
+.shade:before{content:"";display:inline-block;height:100%;vertical-align:middle}
+.modal{position:relative;display:inline-block;width:94%;max-width:535px;padding:23px;border:1px solid #292c34;border-radius:25px;background:#121419;color:#f5f6f8;vertical-align:middle;text-align:left;box-shadow:0 35px 110px rgba(0,0,0,.72)}
+.close{position:absolute;z-index:2;right:13px;top:13px;width:42px;height:42px;padding:0;border:0;border-radius:50%;background:#24272e;color:#e9eaf0;font-size:25px}
+.modal>small{display:block;color:#7ca1ff;font-size:10px;font-weight:700;letter-spacing:1.6px}
+.modal h2{margin:7px 48px 15px 0;font-size:26px;letter-spacing:-.25px}
+.modal-demo{position:relative;height:230px;margin-bottom:13px;overflow:hidden;border-radius:18px;background:#eeeef0}
+.modal-demo img{width:100%;height:100%;object-fit:contain}
+.modal-demo span{position:absolute;right:9px;bottom:8px;padding:4px 7px;border-radius:999px;background:rgba(0,0,0,.67);color:#fff;font-size:9px;font-weight:700}
+.tips{margin:0;padding:0;list-style:none}
+.tips li{margin:7px 0;padding:9px;border-radius:12px;background:#1b1e24;color:#cbd0d7;font-size:13px}
+.tips b{display:inline-block;width:27px;height:27px;margin-right:10px;border-radius:9px;background:#306dff;color:#fff;text-align:center;line-height:27px}
+.primary{width:100%;min-height:51px;margin-top:12px;border:0;border-radius:15px;background:#2f6eff;color:#fff;font-weight:700}
+.hint,.finish p{color:#8c939e;line-height:1.45}
+.days button{width:100%;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;margin:7px 0;padding:10px;border:1px solid #292d35;border-radius:15px;background:#191c22;color:#eef0f3;text-align:left}
+.days button.active{border-color:#3c70ea;background:#17213d}
+.day-code{display:block;width:43px;height:43px;margin-right:11px;border-radius:13px;background:#282b32;text-align:center;line-height:43px;font-weight:700}
+.days button.active .day-code{background:#2f6cff}
+.day-info{-webkit-box-flex:1;flex:1}
+.day-info strong,.day-info small{display:block}
+.day-info small{margin-top:3px;color:#7e8590;font-size:11px}
+.reset{width:100%;margin-top:12px;padding:11px;border:0;background:transparent;color:#d77d7d;font-weight:700}
+.finish{text-align:center}
+.finish-mark{width:64px;height:64px;margin:0 auto 12px;border-radius:21px;background:#183b25;color:#74e29a;font-size:32px;line-height:64px}
+
+.calendar-modal{max-width:690px;padding:24px 28px 25px}
+.calendar-modal>.close{right:15px;top:15px}
+.calendar-head{height:62px;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;margin:0 52px 14px}
+.calendar-head>button{width:46px;height:46px;padding:0;border:1px solid #2a2e36;border-radius:15px;background:#1a1d23;color:#fff;font-size:30px;line-height:1}
+.calendar-head>button:disabled{opacity:.22}
+.calendar-head>div{-webkit-box-flex:1;flex:1;text-align:center}
+.calendar-head small{display:block;color:#749aff;font-size:9px;font-weight:700;letter-spacing:1.5px}
+.calendar-head h2{margin:5px 0 0;font-size:24px}
+.weekdays{display:-webkit-box;display:flex;margin-bottom:7px}
+.weekdays span{display:block;width:14.285%;color:#686f7b;text-align:center;font-size:9px;font-weight:700;letter-spacing:.7px}
+.calendar-grid{display:-webkit-box;display:flex;-webkit-box-lines:multiple;flex-wrap:wrap;overflow:hidden;border:1px solid #262a31;border-radius:18px;background:#0b0d10}
+.cal-cell{position:relative;display:block;width:14.285%;height:57px;border-right:1px solid #1f2228;border-bottom:1px solid #1f2228;background:#0d0f13;color:#666e7a;text-align:center}
+.cal-cell:nth-child(7n){border-right:0}
+.cal-cell b{display:block;width:33px;height:33px;margin:12px auto 0;border-radius:11px;line-height:33px;font-size:13px}
+.cal-cell.scheduled{background:#111624;color:#aabbe7}
+.cal-cell.scheduled:after{content:"";position:absolute;left:50%;bottom:6px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#426fe0}
+.cal-cell.complete{background:#10291a;color:#91e5aa}
+.cal-cell.complete b{background:#1c6234;color:#fff}
+.cal-cell.complete:after{display:none}
+.cal-cell.complete i{position:absolute;right:8px;top:6px;color:#61db85;font-size:10px;font-style:normal}
+.cal-cell.today b{border:1px solid #7298ff;line-height:31px}
+.cal-cell.empty,.cal-cell.outside{background:#090a0d;color:#30343b}
+.calendar-legend{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;margin-top:15px;color:#7c838f;font-size:10px}
+.calendar-legend span{margin:0 12px}
+.calendar-legend i{display:inline-block;width:8px;height:8px;margin-right:6px;border-radius:50%}
+.plan-dot{background:#426fe0}
+.done-dot{background:#49ca75}
+
+@media(max-height:650px){
+  .topbar{height:62px;padding-top:7px;padding-bottom:7px}.grid{top:62px;padding-top:8px;padding-bottom:8px}.brand{height:44px}.brand-mark{width:39px;height:39px;line-height:39px}.top-actions button{height:39px}.card{padding:12px;border-radius:21px}.person{flex-basis:34px}.avatar{width:33px;height:33px;line-height:33px}.person h2{font-size:17px}.exercise{min-height:101px;padding-top:10px}.exercise h3{min-height:42px;margin-top:6px;margin-bottom:7px;font-size:21px}.tech-button{padding-top:7px;padding-bottom:7px}.previous{flex-basis:35px;height:35px;margin-top:7px}.controls{margin-top:8px}.control{padding-top:8px;padding-bottom:7px}.stepper button{min-height:50px}.stepper b{font-size:34px}.done-button{flex-basis:49px;min-height:49px;margin-top:8px}.rest-orb strong{font-size:98px}.rest-line{margin-top:19px}.rest-card button{margin-top:19px}.modal-demo{height:170px}.tips li{margin:5px 0;padding:7px}.primary{min-height:46px;margin-top:8px}.cal-cell{height:48px}.cal-cell b{margin-top:7px}}
+
+@media(max-width:800px){
+  .topbar{padding-left:8px;padding-right:8px}.title{margin-left:3px}.title b{font-size:18px}.skip-button{padding-left:10px;padding-right:10px}.calendar-button{width:43px;padding:0;-webkit-box-pack:center;justify-content:center}.calendar-button span{margin:0}.calendar-button b{display:none}.grid{padding-left:4px;padding-right:4px}.card{margin:0 3px;padding-left:11px;padding-right:11px}.exercise h3{font-size:21px}.tech-button{padding-left:8px;padding-right:8px;font-size:10px}.previous em{display:none}.control{margin-left:3px;margin-right:3px;padding-left:5px;padding-right:5px}.controls{margin-left:-3px;margin-right:-3px}.stepper button{width:42px;flex-basis:42px}.stepper b{font-size:32px}.done-button{font-size:13px}.calendar-modal{padding-left:16px;padding-right:16px}}
