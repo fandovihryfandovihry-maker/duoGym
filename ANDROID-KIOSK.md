@@ -1,6 +1,10 @@
 # DuoGym na Android tabletu
 
-## Důležitá věc
+## Doporučená varianta s GitHub Pages
+
+Po publikování podle `GITHUB-PAGES.md` vložte veřejnou HTTPS adresu jako `Start URL` do aplikace **Fully Kiosk Browser & Lockdown**. Počítač potom nemusí být zapnutý a není potřeba žádné přihlašování do DuoGym.
+
+## Lokální varianta bez hostingu
 
 `localhost` na tabletu znamená samotný tablet, ne počítač. Počítač proto musí běžet ve stejné Wi-Fi a tablet otevírá jeho lokální adresu, například `http://192.168.1.50:3000`.
 
@@ -15,7 +19,7 @@ V routeru nastavte počítači rezervovanou IP adresu. Kdyby se IP změnila, pro
 
 ## Doporučený kiosk režim
 
-Pro nástěnný tablet je nejpraktičtější Fully Kiosk Browser:
+Pro nástěnný tablet je nejpraktičtější aplikace **Fully Kiosk Browser & Lockdown**:
 
 1. Nainstalujte Fully Kiosk Browser z Google Play.
 2. Do `Start URL` vložte lokální adresu DuoGym.
