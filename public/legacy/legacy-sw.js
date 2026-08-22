@@ -1,12 +1,12 @@
 'use strict';
 
-var CACHE_NAME='duogym-legacy-v15';
+var CACHE_NAME='duogym-legacy-v16';
 var APP_SHELL=[
   './',
   './index.html',
-  './legacy-v4.css?v=15',
-  './legacy.js?v=15',
-  './manifest.webmanifest?v=15',
+  './legacy-v4.css?v=16',
+  './legacy.js?v=16',
+  './manifest.webmanifest?v=16',
   '../icon.svg',
   './fonts/manrope-regular.woff',
   './fonts/manrope-medium.woff',
