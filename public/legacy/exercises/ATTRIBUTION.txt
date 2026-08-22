@@ -1,0 +1,46 @@
+DuoGym exercise imagery
+========================
+
+The exercise images in this directory were downloaded from the open-source
+wger Workout Manager project (https://wger.de and https://github.com/wger-project).
+They are redistributed under the license attached to each source record:
+CC BY-SA 3.0, CC BY-SA 4.0, or CC0. The original authors include Everkinetic,
+Lynn McIntyre, Settebello, Behrooz, and the respective wger contributors.
+
+Source records and original files:
+- Bench press: https://wger.de/api/v2/exerciseinfo/73/
+- One arm bent row: https://wger.de/api/v2/exerciseinfo/1186/
+- Shoulder press: https://wger.de/api/v2/exerciseinfo/566/
+- Rear delt row: https://wger.de/api/v2/exerciseinfo/1227/
+- EZ curl: https://wger.de/api/v2/exerciseinfo/94/
+- Lateral raise: https://wger.de/api/v2/exerciseinfo/348/
+- Push-up: https://wger.de/api/v2/exerciseinfo/1551/
+- Hollow hold: https://wger.de/api/v2/exerciseinfo/297/
+- Barbell squat: https://wger.de/api/v2/exerciseinfo/1801/
+- Dumbbell Romanian deadlift: https://wger.de/api/v2/exerciseinfo/1652/
+- High knee jump: https://wger.de/api/v2/exerciseinfo/285/
+- Standing calf raise: https://wger.de/api/v2/exerciseinfo/622/
+- Dumbbell reverse lunge: https://wger.de/api/v2/exerciseinfo/1651/
+- Dumbbell hip thrust: https://wger.de/api/v2/exerciseinfo/1642/
+- Plank shoulder tap: https://wger.de/api/v2/exerciseinfo/1091/
+- Plank: https://wger.de/api/v2/exerciseinfo/458/
+- Push press: https://wger.de/api/v2/exerciseinfo/478/
+- Incline dumbbell press: https://wger.de/api/v2/exerciseinfo/537/
+- Bent-over row: https://wger.de/api/v2/exerciseinfo/83/
+- Close-grip bench press: https://wger.de/api/v2/exerciseinfo/76/
+- Hammer curl: https://wger.de/api/v2/exerciseinfo/272/
+- EZ skull crusher: https://wger.de/api/v2/exerciseinfo/246/
+- Deadlift: https://wger.de/api/v2/exerciseinfo/184/
+- Goblet squat: https://wger.de/api/v2/exerciseinfo/203/
+- Bulgarian split squat: https://wger.de/api/v2/exerciseinfo/1706/
+- Front raises: https://wger.de/api/v2/exerciseinfo/256/
+- Barbell shrugs: https://wger.de/api/v2/exerciseinfo/571/
+
+License texts:
+- https://creativecommons.org/licenses/by-sa/3.0/
+- https://creativecommons.org/licenses/by-sa/4.0/
+- https://creativecommons.org/publicdomain/zero/1.0/
+
+The files under web/ are resized JPEG derivatives created only to make the
+offline tablet application load quickly. The same license and attribution as
+the corresponding source image continue to apply.
