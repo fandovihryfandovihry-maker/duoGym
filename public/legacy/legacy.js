@@ -15,24 +15,24 @@
   var startingWeights={bench:35,lateral:5,closebench:30,dbohp:10,incline:10,skull:20,barrow:15,hammer:10,shrug:20,reardelt:5,dbrow:15,curl:20,squat:20,barrdl:20,lunge:10,ohp:20};
   var workouts=[
     {name:'Push',sub:'Hrudník · triceps · ramena',blocks:[
-      {sets:4,a:ex('bench','Benchpress na lavici',12,'12 op.','VELKÁ OSA + LAVICE','press'),b:ex('lateral','Upažování vestoje',12,'12 op.','2 JEDNORUČKY','arms',1)},
-      {sets:4,a:ex('closebench','Benchpress úzkým úchopem',12,'12 op.','VELKÁ OSA + LAVICE','press'),b:ex('dbohp','Tlaky s jednoručkami nad hlavu vestoje',12,'12 op.','2 JEDNORUČKY','press',1)},
-      {sets:4,a:ex('incline','Tlaky s jednoručkami na šikmé lavici',12,'12 op.','LAVICE + 2 JEDNORUČKY','press',1),b:ex('skull','Francouzský tlak s EZ vleže na zemi',12,'12 op.','EZ OSA + PODLOŽKA','arms')}
+      {sets:4,a:ex('bench','Benchpress na lavici',8,'8 op.','VELKÁ OSA + LAVICE','press'),b:ex('lateral','Upažování vestoje',12,'12 op.','2 JEDNORUČKY','arms',1)},
+      {sets:3,a:ex('closebench','Benchpress úzkým úchopem',10,'10 op.','VELKÁ OSA + LAVICE','press'),b:ex('dbohp','Tlaky s jednoručkami nad hlavu vestoje',10,'10 op.','2 JEDNORUČKY','press',1)},
+      {sets:3,a:ex('incline','Tlaky s jednoručkami na šikmé lavici',12,'12 op.','LAVICE + 2 JEDNORUČKY','press',1),b:ex('skull','Francouzský tlak s EZ vleže na zemi',12,'12 op.','EZ OSA + PODLOŽKA','arms')}
     ]},
     {name:'Pull',sub:'Záda · biceps',blocks:[
-      {sets:4,a:ex('barrow','Přítahy velké osy v předklonu',12,'12 op.','VELKÁ OSA','row'),b:ex('hammer','Kladivové zdvihy',12,'12 op.','2 JEDNORUČKY','arms',1)},
-      {sets:4,a:ex('shrug','Krčení ramen s velkou osou',12,'12 op.','VELKÁ OSA','row'),b:ex('reardelt','Upažování v předklonu',12,'12 op.','2 JEDNORUČKY','row',1)},
-      {sets:4,a:ex('dbrow','Přítahy jednoručky v předklonu',12,'12 / ruka','2 JEDNORUČKY','row',1),b:ex('curl','Bicepsový zdvih s EZ',12,'12 op.','EZ OSA','arms')}
+      {sets:4,a:ex('barrow','Přítahy velké osy v předklonu',8,'8 op.','VELKÁ OSA','row'),b:ex('hammer','Kladivové zdvihy',12,'12 op.','2 JEDNORUČKY','arms',1)},
+      {sets:3,a:ex('shrug','Krčení ramen s velkou osou',10,'10 op.','VELKÁ OSA','row'),b:ex('reardelt','Upažování v předklonu',12,'12 op.','2 JEDNORUČKY','row',1)},
+      {sets:3,a:ex('dbrow','Přítahy jednoručky v předklonu',12,'12 / ruka','2 JEDNORUČKY','row',1),b:ex('curl','Bicepsový zdvih s EZ',12,'12 op.','EZ OSA','arms')}
     ]},
     {name:'Nohy + břicho',sub:'Nohy · břicho',blocks:[
-      {sets:4,a:ex('squat','Zadní dřep s osou',12,'12 op.','VELKÁ OSA','squat'),b:ex('legraise','Zvedání nohou vleže',12,'12 op.','PODLOŽKA','core',0,'',true)},
-      {sets:4,a:ex('barrdl','Rumunský mrtvý tah s osou',12,'12 op.','VELKÁ OSA','hinge'),b:ex('plank','Plank',30,'30 s','PODLOŽKA','core',0,'',true)},
-      {sets:4,a:ex('lunge','Výpady vzad s jednoručkami',12,'12 / noha','2 JEDNORUČKY','squat',1),b:ex('hollow','Hollow hold',30,'30 s','PODLOŽKA','core',0,'',true)}
+      {sets:4,a:ex('squat','Zadní dřep s osou',8,'8 op.','VELKÁ OSA','squat'),b:ex('legraise','Zvedání nohou vleže',12,'12 op.','PODLOŽKA','core',0,'',true)},
+      {sets:3,a:ex('barrdl','Rumunský mrtvý tah s osou',10,'10 op.','VELKÁ OSA','hinge'),b:ex('plank','Plank',30,'30 s','PODLOŽKA','core',0,'',true)},
+      {sets:3,a:ex('lunge','Výpady vzad s jednoručkami',12,'12 / noha','2 JEDNORUČKY','squat',1),b:ex('hollow','Hollow hold',30,'30 s','PODLOŽKA','core',0,'',true)}
     ]},
     {name:'Ramena + paže',sub:'Ramena · biceps · triceps',blocks:[
-      {sets:4,a:ex('ohp','Tlaky nad hlavu vestoje',12,'12 op.','VELKÁ OSA','press'),b:ex('hammer','Kladivové zdvihy',12,'12 op.','2 JEDNORUČKY','arms',1)},
-      {sets:4,a:ex('lateral','Upažování vestoje',12,'12 op.','2 JEDNORUČKY','arms',1),b:ex('curl','Bicepsový zdvih s EZ',12,'12 op.','EZ OSA','arms')},
-      {sets:4,a:ex('reardelt','Upažování v předklonu',12,'12 op.','2 JEDNORUČKY','row',1),b:ex('skull','Francouzský tlak s EZ vleže na zemi',12,'12 op.','EZ OSA + PODLOŽKA','arms')}
+      {sets:4,a:ex('ohp','Tlaky nad hlavu vestoje',8,'8 op.','VELKÁ OSA','press'),b:ex('hammer','Kladivové zdvihy',12,'12 op.','2 JEDNORUČKY','arms',1)},
+      {sets:3,a:ex('lateral','Upažování vestoje',12,'12 op.','2 JEDNORUČKY','arms',1),b:ex('curl','Bicepsový zdvih s EZ',10,'10 op.','EZ OSA','arms')},
+      {sets:3,a:ex('reardelt','Upažování v předklonu',12,'12 op.','2 JEDNORUČKY','row',1),b:ex('skull','Francouzský tlak s EZ vleže na zemi',12,'12 op.','EZ OSA + PODLOŽKA','arms')}
     ]}
   ];
 
