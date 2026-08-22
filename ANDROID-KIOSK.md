@@ -1,5 +1,20 @@
 # DuoGym na Android tabletu
 
+## Android 4.4.2
+
+Současný Fully Kiosk už Android 4.4 nepodporuje. Pro tento tablet použij
+**Kiosk Browser 2.9.3 (build 360)** z oficiálního archivu výrobce. APK stáhni
+na počítači, přenes přes USB a na tabletu před instalací povol
+`Nastavení > Zabezpečení > Neznámé zdroje`.
+
+Start URL:
+
+`https://fandovihryfandovihry-maker.github.io/duoGym/`
+
+DuoGym Android 4.4 rozpozná a automaticky otevře kompatibilní variantu na
+`/duoGym/legacy/`. Ta nepoužívá Service Worker ani moderní JavaScript, ale
+zachovává tréninky, historii vah, střídání stanovišť a 30s odpočinek.
+
 ## Doporučená varianta s GitHub Pages
 
 Po publikování podle `GITHUB-PAGES.md` vložte veřejnou HTTPS adresu jako `Start URL` do aplikace **Fully Kiosk Browser & Lockdown**. Počítač potom nemusí být zapnutý a není potřeba žádné přihlašování do DuoGym.
