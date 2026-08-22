@@ -15,27 +15,23 @@
   var workouts=[
     {name:'Push',sub:'Hrudník · triceps · ramena',blocks:[
       {sets:4,a:ex('bench','Benchpress na lavici',8,'6–8 op.','VELKÁ OSA + LAVICE','press'),b:ex('lateral','Upažování vestoje',12,'12 op.','2 JEDNORUČKY','arms',1)},
-      {sets:3,a:ex('incline','Tlaky s jednoručkami na šikmé lavici',10,'8–10 op.','LAVICE + 2 JEDNORUČKY','press'),b:ex('pushpress','Push press s osou',5,'5 rychlých op.','VELKÁ OSA','power',2.5,'Tlaky nad hlavu bez dopomoci')},
-      {sets:3,a:ex('closebench','Benchpress úzkým úchopem',8,'8 op.','VELKÁ OSA + LAVICE','press'),b:ex('explosivepushup','Explozivní kliky',5,'5 rychlých op.','VLASTNÍ VÁHA','power',0,'Svižné kliky o lavici',true)},
-      {sets:3,a:ex('ohp','Tlaky nad hlavu vestoje',8,'8 op.','VELKÁ OSA','press'),b:ex('skull','Francouzský tlak s EZ',10,'10 op.','EZ OSA + LAVICE','arms')}
+      {sets:3,a:ex('closebench','Benchpress úzkým úchopem',8,'8 op.','VELKÁ OSA + LAVICE','press'),b:ex('dbohp','Tlaky s jednoručkami nad hlavu vestoje',10,'10 op.','2 JEDNORUČKY','press',1)},
+      {sets:3,a:ex('incline','Tlaky s jednoručkami na šikmé lavici',10,'8–10 op.','LAVICE + 2 JEDNORUČKY','press',1),b:ex('skull','Francouzský tlak s EZ vleže na zemi',10,'10 op.','EZ OSA + PODLOŽKA','arms')}
     ]},
     {name:'Pull',sub:'Záda · biceps',blocks:[
-      {sets:4,a:ex('ezrow','Přítahy EZ osy v předklonu',8,'8 op.','EZ OSA','row'),b:ex('dbrow','Přítahy jednoručky v předklonu',8,'8 / ruka','2 JEDNORUČKY','row')},
-      {sets:3,a:ex('deadlift','Mrtvý tah s velkou osou',5,'5 op.','VELKÁ OSA','hinge'),b:ex('reardelt','Přítahy jednoruček na zadní ramena',12,'12 op.','2 JEDNORUČKY','row',1)},
-      {sets:3,a:ex('curl','Bicepsový zdvih s EZ',10,'10 op.','EZ OSA','arms'),b:ex('hammer','Kladivové zdvihy',10,'10 op.','2 JEDNORUČKY','arms',1)},
-      {sets:3,a:ex('shrug','Krčení ramen s osou',10,'10 op.','VELKÁ OSA','row'),b:ex('hollow','Hollow hold',30,'30 s','PODLOŽKA','core',0,'',true)}
+      {sets:4,a:ex('barrow','Přítahy velké osy v předklonu',8,'8 op.','VELKÁ OSA','row'),b:ex('hammer','Kladivové zdvihy',10,'10 op.','2 JEDNORUČKY','arms',1)},
+      {sets:3,a:ex('shrug','Krčení ramen s velkou osou',10,'10 op.','VELKÁ OSA','row'),b:ex('reardelt','Upažování v předklonu',12,'12 op.','2 JEDNORUČKY','row',1)},
+      {sets:3,a:ex('dbrow','Přítahy jednoručky v předklonu',8,'8 / ruka','2 JEDNORUČKY','row',1),b:ex('curl','Bicepsový zdvih s EZ',10,'10 op.','EZ OSA','arms')}
     ]},
-    {name:'Nohy + core',sub:'Nohy · výbušnost · břicho',blocks:[
-      {sets:4,a:ex('squat','Zadní dřep s osou',6,'6 op.','VELKÁ OSA','squat'),b:ex('rdl','Rumunský mrtvý tah s jednoručkami',8,'8 op.','2 JEDNORUČKY','hinge')},
-      {sets:4,a:ex('jump','Výskoky s koleny vzhůru',5,'5 výskoků','VLASTNÍ VÁHA','power',0,'Rychlý dřep na špičky',true),b:ex('calf','Výpony na lýtka s EZ',12,'12 op.','EZ OSA','squat',1)},
-      {sets:3,a:ex('lunge','Výpady vzad s jednoručkami',8,'8 / noha','2 JEDNORUČKY','squat'),b:ex('hip','Hip thrust s osou na lavici',10,'10 op.','VELKÁ OSA + LAVICE','hinge')},
-      {sets:3,a:ex('shouldertap','Plank s dotykem ramen',10,'10 / strana','PODLOŽKA','core',0,'',true),b:ex('hollow','Hollow hold',30,'30 s','PODLOŽKA','core',0,'',true)}
+    {name:'Nohy + břicho',sub:'Nohy · břicho',blocks:[
+      {sets:4,a:ex('squat','Zadní dřep s osou',8,'6–8 op.','VELKÁ OSA','squat'),b:ex('legraise','Zvedání nohou vleže',12,'12 op.','PODLOŽKA','core',0,'',true)},
+      {sets:3,a:ex('barrdl','Rumunský mrtvý tah s osou',8,'8 op.','VELKÁ OSA','hinge'),b:ex('plank','Plank',30,'30 s','PODLOŽKA','core',0,'',true)},
+      {sets:3,a:ex('lunge','Výpady vzad s jednoručkami',8,'8 / noha','2 JEDNORUČKY','squat',1),b:ex('hollow','Hollow hold',30,'30 s','PODLOŽKA','core',0,'',true)}
     ]},
     {name:'Ramena + paže',sub:'Ramena · biceps · triceps',blocks:[
-      {sets:4,a:ex('pushpress','Push press s osou',5,'5 rychlých op.','VELKÁ OSA','power',2.5,'Tlaky nad hlavu bez dopomoci'),b:ex('lateral','Upažování vestoje',12,'12 op.','2 JEDNORUČKY','arms',1)},
-      {sets:3,a:ex('ohp','Tlaky nad hlavu vestoje',8,'8 op.','VELKÁ OSA','press'),b:ex('reardelt','Přítahy jednoruček na zadní ramena',12,'12 op.','2 JEDNORUČKY','row',1)},
-      {sets:3,a:ex('curl','Bicepsový zdvih s EZ',10,'10 op.','EZ OSA','arms'),b:ex('frontraise','Předpažování s jednoručkami',10,'10 op.','2 JEDNORUČKY','arms',1)},
-      {sets:3,a:ex('hammer','Kladivové zdvihy',10,'10 op.','2 JEDNORUČKY','arms',1),b:ex('skull','Francouzský tlak s EZ',10,'10 op.','EZ OSA + LAVICE','arms')}
+      {sets:4,a:ex('ohp','Tlaky nad hlavu vestoje',8,'8 op.','VELKÁ OSA','press'),b:ex('hammer','Kladivové zdvihy',10,'10 op.','2 JEDNORUČKY','arms',1)},
+      {sets:3,a:ex('lateral','Upažování vestoje',12,'12 op.','2 JEDNORUČKY','arms',1),b:ex('curl','Bicepsový zdvih s EZ',10,'10 op.','EZ OSA','arms')},
+      {sets:3,a:ex('reardelt','Upažování v předklonu',12,'12 op.','2 JEDNORUČKY','row',1),b:ex('skull','Francouzský tlak s EZ vleže na zemi',10,'10 op.','EZ OSA + PODLOŽKA','arms')}
     ]}
   ];
 
@@ -43,12 +39,15 @@
     bench:{files:['exercises/web/bench-1.jpg','exercises/web/bench-2.jpg'],credit:'Everkinetic · wger · CC BY-SA'},
     dbrow:{files:['exercises/web/dumbbell-row-clean.jpg'],credit:'sebk · wger · CC BY-SA'},
     ohp:{files:['exercises/web/ohp-1.jpg','exercises/web/ohp-2.jpg'],credit:'wger · CC BY-SA'},
+    dbohp:{files:['exercises/web/ohp-1.jpg','exercises/web/ohp-2.jpg'],credit:'wger · CC BY-SA'},
     reardelt:{files:['exercises/rear-delt.gif'],credit:'Lynn McIntyre · wger · CC BY-SA'},
     curl:{files:['exercises/web/ez-curl-clean-1.jpg','exercises/web/ez-curl-clean-2.jpg'],credit:'wger · CC BY-SA'},
     lateral:{files:['exercises/web/lateral-1.jpg','exercises/web/lateral-2.jpg'],credit:'wger · CC BY-SA'},
     frontraise:{files:['exercises/web/front-raise.jpg'],credit:'philip · wger · CC BY-SA'},
     explosivepushup:{files:['exercises/web/explosive-pushup-original.jpg'],credit:'Originální ilustrace DuoGym'},
     hollow:{files:['exercises/web/hollow.jpg'],credit:'Behrooz · wger · CC0'},
+    legraise:{files:['exercises/web/leg-raise-1.jpg','exercises/web/leg-raise-2.jpg'],credit:'Everkinetic · wger · CC BY-SA'},
+    barrdl:{files:['exercises/web/bar-rdl-1.jpg','exercises/web/bar-rdl-2.jpg'],credit:'Everkinetic · Wikimedia Commons · CC BY-SA'},
     squat:{files:['exercises/web/squat-1.jpg','exercises/web/squat-2.jpg'],credit:'wger · CC BY-SA'},
     rdl:{files:['exercises/web/rdl.jpg'],credit:'wger · CC BY-SA'},
     jump:{files:['exercises/web/jump.jpg'],credit:'wger · CC BY-SA'},
@@ -62,6 +61,7 @@
     pushpress:{files:['exercises/web/push-press.jpg'],credit:'wger · CC BY-SA'},
     incline:{files:['exercises/web/incline-1.jpg','exercises/web/incline-clean-2.jpg'],credit:'Everkinetic · wger · CC BY-SA'},
     ezrow:{files:['exercises/web/ez-row-1.jpg','exercises/web/ez-row-2.jpg'],credit:'Everkinetic · wger · CC BY-SA'},
+    barrow:{files:['exercises/web/ez-row-1.jpg','exercises/web/ez-row-2.jpg'],credit:'Everkinetic · wger · CC BY-SA'},
     closebench:{files:['exercises/web/close-bench-1.jpg','exercises/web/close-bench-clean-2.jpg'],credit:'Everkinetic · wger · CC BY-SA'},
     hammer:{files:['exercises/web/hammer-1.jpg','exercises/web/hammer-2.jpg'],credit:'wger · CC BY-SA'},
     skull:{files:['exercises/web/skull-1.jpg','exercises/web/skull-2.jpg'],credit:'wger · CC BY-SA'},
@@ -82,7 +82,7 @@
   function key(person,item){return person+':'+item.id;}
   function fmt(value){return value%1===0?String(value):value.toFixed(1);}
   function last(list){return list&&list.length?list[list.length-1]:null;}
-  function current(){var workout=workouts[state.day],block=workout.blocks[state.block],swap=state.set%2===1;return{workout:workout,block:block,son:swap?block.b:block.a,dad:swap?block.a:block.b,swap:swap};}
+  function current(){var workout=workouts[state.day],block=workout.blocks[state.block],swap=state.set>=block.sets;return{workout:workout,block:block,son:swap?block.b:block.a,dad:swap?block.a:block.b,swap:swap};}
   function shownName(person,item){return person==='dad'&&item.dadName?item.dadName:item.name;}
   function suggested(person,item,sets){var list,old,i,full=true,recent;if(item.noLoad){return 0;}list=state.history[key(person,item)]||[];old=last(list);if(!old){return person==='son'?20:12.5;}recent=list.slice(Math.max(0,list.length-sets));if(recent.length<sets){full=false;}for(i=0;i<recent.length;i++){if(recent[i].reps<item.reps){full=false;}}return full?old.weight+item.step:old.weight;}
   function weight(person,item,sets){var value;if(item.noLoad){return 0;}value=state.weights[key(person,item)];return typeof value==='number'?value:suggested(person,item,sets);}
@@ -92,7 +92,7 @@
   function totalSets(workout){var n=0,i;for(i=0;i<workout.blocks.length;i++){n+=workout.blocks[i].sets*2;}return n;}
   function doneTurns(workout){var n=state.set,i;for(i=0;i<state.block;i++){n+=workout.blocks[i].sets*2;}return n;}
   function demoMedia(item){var data=media[item.id],html,i;if(!data){return '<div class="real-demo missing-demo"><b>Ukázka není dostupná</b></div>';}html='<div class="real-demo'+(data.files.length>1?' two-frame':'')+'" role="img" aria-label="Ukázka provedení cviku '+esc(item.name)+'">';for(i=0;i<data.files.length;i++){html+='<img class="media-frame frame-'+(i+1)+'" src="'+esc(data.files[i])+'" alt="'+esc(item.name)+' – poloha '+(i+1)+'">';}if(data.files.length>1){html+='<span class="motion-label">START <i>→</i> CÍL</span>';}html+='<small class="media-credit">'+esc(data.credit)+'</small></div>';return html;}
-  function sideCue(item){var part=unilateral[item.id],right=Math.floor(state.set/2)%2===0,first=right?'PRAVÁ':'LEVÁ',second=right?'levá':'pravá';return part?'<div class="side-cue"><span>ZAČNI</span><b>'+first+' '+part+'</b><i>potom '+second.toLowerCase()+' '+part.toLowerCase()+'</i></div>':'';}
+  function sideCue(item){var part=unilateral[item.id],sets=workouts[state.day].blocks[state.block].sets,right=state.set%sets%2===0,first=right?'PRAVÁ':'LEVÁ',second=right?'levá':'pravá';return part?'<div class="side-cue"><span>ZAČNI</span><b>'+first+' '+part+'</b><i>potom '+second.toLowerCase()+' '+part.toLowerCase()+'</i></div>':'';}
   function pad(value){return value<10?'0'+value:String(value);}
   function dayKey(date){return date.getFullYear()+'-'+pad(date.getMonth()+1)+'-'+pad(date.getDate());}
   function inSchoolYear(date){var start=new Date(2026,8,1),end=new Date(2027,5,30,23,59,59);return date>=start&&date<=end;}
@@ -116,7 +116,7 @@
     else if(state.menu){html='<div class="shade" data-action="close"><div class="modal" data-stop="1"><button class="close" data-action="close">×</button><small>TRÉNINK</small><h2>Vyber den</h2><p class="hint">Pondělí až čtvrtek se správný trénink vybere automaticky.</p><div class="days">';for(i=0;i<workouts.length;i++){html+='<button class="'+(i===state.day?'active':'')+'" data-action="choose" data-index="'+i+'"><span class="day-code">'+['PO','ÚT','ST','ČT'][i]+'</span><span class="day-info"><strong>'+esc(workouts[i].name)+'</strong><small>'+esc(workouts[i].sub)+' · '+totalSets(workouts[i])+' sérií / osoba</small></span><b>→</b></button>';}html+='</div><button class="reset" data-action="reset">Smazat historii zařízení</button></div></div>';}
     return html;
   }
-  function render(){var ctx=current(),round=Math.floor(state.set/2)+1,station=state.set%2+1,progress=doneTurns(ctx.workout)/totalSets(ctx.workout)*100;app.innerHTML='<div class="app"><header class="topbar"><button class="brand" data-action="menu" aria-label="Vybrat trénink"><span class="brand-mark">D</span></button><div class="title"><b>'+esc(ctx.workout.name)+'</b><small><span class="actual-date">'+esc(dateLabel())+'</span> &nbsp;·&nbsp; BLOK '+(state.block+1)+'/'+ctx.workout.blocks.length+' &nbsp;·&nbsp; KOLO '+round+'/'+ctx.block.sets+' &nbsp;·&nbsp; STANOVIŠTĚ '+station+'/2</small></div><div class="top-actions"><button class="skip-button" data-action="skip">Přeskočit stanoviště</button><button class="calendar-button" data-action="calendar" aria-label="Kalendář"><span>▦</span><b>Kalendář</b></button><button class="settings-button" data-action="menu" aria-label="Vybrat den">•••</button></div><div class="progress"><i style="width:'+progress+'%"></i></div></header><section class="grid">'+card('son',ctx.son,ctx.block)+card('dad',ctx.dad,ctx.block)+'</section>'+(state.rest!==null?'<div class="rest-overlay"><div class="rest-card"><small>ODPOČINEK</small><div class="rest-orb"><strong>'+state.rest+'</strong><span>s</span></div><div class="rest-line"><i style="width:'+(state.rest/30*100)+'%"></i></div><button data-action="continue">Pokračovat hned</button></div></div>':'')+modal(ctx)+'</div>';}
+  function render(){var ctx=current(),round=state.set%ctx.block.sets+1,station=state.set>=ctx.block.sets?2:1,progress=doneTurns(ctx.workout)/totalSets(ctx.workout)*100;app.innerHTML='<div class="app"><header class="topbar"><button class="brand" data-action="menu" aria-label="Vybrat trénink"><span class="brand-mark">D</span></button><div class="title"><b>'+esc(ctx.workout.name)+'</b><small><span class="actual-date">'+esc(dateLabel())+'</span> &nbsp;·&nbsp; BLOK '+(state.block+1)+'/'+ctx.workout.blocks.length+' &nbsp;·&nbsp; SÉRIE '+round+'/'+ctx.block.sets+' &nbsp;·&nbsp; STANOVIŠTĚ '+station+'/2</small></div><div class="top-actions"><button class="skip-button" data-action="skip">Přeskočit sérii</button><button class="calendar-button" data-action="calendar" aria-label="Kalendář"><span>▦</span><b>Kalendář</b></button><button class="settings-button" data-action="menu" aria-label="Vybrat den">•••</button></div><div class="progress"><i style="width:'+progress+'%"></i></div></header><section class="grid">'+card('son',ctx.son,ctx.block)+card('dad',ctx.dad,ctx.block)+'</section>'+(state.rest!==null?'<div class="rest-overlay"><div class="rest-card"><small>ODPOČINEK</small><div class="rest-orb"><strong>'+state.rest+'</strong><span>s</span></div><div class="rest-line"><i style="width:'+(state.rest/30*100)+'%"></i></div><button data-action="continue">Pokračovat hned</button></div></div>':'')+modal(ctx)+'</div>';}
   function clearRest(){if(state.interval){clearInterval(state.interval);}state.interval=null;state.rest=null;}
   function resetPosition(day){clearRest();state.day=day;state.block=0;state.set=0;state.done={son:false,dad:false};state.menu=false;state.calendar=false;state.help=null;state.finish=false;render();}
   function advance(){var ctx=current();state.done={son:false,dad:false};if(state.set+1<ctx.block.sets*2){state.set++;}else if(state.block+1<ctx.workout.blocks.length){state.block++;state.set=0;}else{markCompletion();state.finish=true;}render();}

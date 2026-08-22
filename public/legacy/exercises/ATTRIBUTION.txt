@@ -16,8 +16,10 @@ Source records and original files:
 - Lateral raise: https://wger.de/api/v2/exerciseinfo/348/
 - Push-up: https://wger.de/api/v2/exerciseinfo/1551/
 - Hollow hold: https://wger.de/api/v2/exerciseinfo/297/
+- Lying leg raises: https://wger.de/api/v2/exerciseinfo/377/
 - Barbell squat: https://wger.de/api/v2/exerciseinfo/1801/
 - Dumbbell Romanian deadlift: https://wger.de/api/v2/exerciseinfo/1652/
+- Barbell Romanian deadlift positions: https://commons.wikimedia.org/wiki/File:Romanian_dead_lift_1.svg and https://commons.wikimedia.org/wiki/File:Romanian_dead_lift_2.svg
 - High knee jump: https://wger.de/api/v2/exerciseinfo/285/
 - Standing calf raise: https://wger.de/api/v2/exerciseinfo/622/
 - Dumbbell reverse lunge: https://wger.de/api/v2/exerciseinfo/1651/
